@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-canvas: #f7f4ef;
+  --color-ink: #201c17;
+  --color-ink-foreground: #f7f4ef;
+  --color-muted: #5c554b;
+  --color-hairline: rgba(32, 28, 23, 0.1);
+
+  --color-primary: #e2481f;
+  --color-primary-foreground: #fdf7ef;
+  --color-acid: #29b6e8;
+  --color-acid-foreground: #201c17;
+  --color-love: #8b5cf6;
+  --color-love-foreground: #faf5ff;
+  --color-gold: #c9a227;
+  --color-gold-foreground: #201c17;
+  --color-gold-deep: #8a6a19;
+
+  --font-sans: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Archivo Black', 'Arial Black', sans-serif;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    color: var(--color-ink);
+    background: var(--color-canvas);
+    font-family: var(--font-sans);
+  }
+
+  a {
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-canvas);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+  }
+}
+
+.section-ink {
+  background-color: var(--color-ink);
+  color: var(--color-ink-foreground);
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  z-index: 30;
+}
+
+.marquee-track {
+  animation: marquee-scroll var(--marquee-duration, 18s) linear infinite;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+.text-stacked {
+  color: var(--color-ink-foreground);
+  text-shadow:
+    0.05em 0.05em 0 var(--color-primary),
+    0.1em 0.1em 0 var(--color-acid);
+}
+
+.text-stacked-ink {
+  color: var(--color-ink);
+  text-shadow:
+    0.05em 0.05em 0 var(--color-primary),
+    0.1em 0.1em 0 var(--color-acid);
+}

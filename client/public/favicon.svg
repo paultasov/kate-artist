@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Same mark as the header logo (vermillion circle + palette), reused
+       rather than inventing a second brand symbol just for the tab icon. -->
+  <circle cx="16" cy="16" r="16" fill="#e2481f" />
+  <path
+    fill="#fdf7ef"
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M16 6.5c-5.799 0-10.5 4.253-10.5 9.5 0 3.038 1.586 5.25 4.375 5.25.921 0 1.5-.63 1.5-1.427 0-.552-.335-.968-.335-1.5 0-.874.837-1.198 1.71-1.198h3.5c3.038 0 5.5-2.127 5.5-4.75 0-3.238-2.462-5.875-5.75-5.875Zm-6.75 8.75a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm2.25-3.75a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm4-1.75a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm3.75 1.25a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
+  />
+</svg>
