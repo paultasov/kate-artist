@@ -6,19 +6,20 @@ import { Magnetic } from '@/shared/ui/Magnetic';
 import { MarqueeBanner } from '@/widgets/marquee-banner';
 import { FeaturedSlider } from '@/widgets/featured-slider';
 import { getArtworks } from '@/entities/artwork';
+import { publicUrl } from '@/shared/lib/publicUrl';
 
-const ABOUT_PHOTO = '/artworks/artwork-01.png';
+const ABOUT_PHOTO = publicUrl('/artworks/artwork-01.png');
 
 const TAGS = ['ДЕРЗКО', 'ЧЕСТНОСТЬ', 'ХАОС', 'ГЛУБИНА', 'ЯРКО', 'МОМЕНТ', 'ГРОМКО', 'СУТЬ'];
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const SLIDES = [
-  { kicker: 'Студия · Акрил', line: 'Крупные форматы', photo: '/slider/kate-01.png' },
-  { kicker: 'Акрил · Мастихин · Спрей', line: 'Работаю быстро', photo: '/slider/kate-02.png' },
-  { kicker: 'Плотный цвет, никаких полутонов', line: 'Живу ярко', photo: '/slider/kate-03.png' },
-  { kicker: 'Ночной город, дневная студия', line: 'Смотрю иначе', photo: '/slider/kate-04.png' },
-  { kicker: 'Никаких компромиссов', line: 'Делаю по-своему', photo: '/slider/kate-05.png' },
+  { kicker: 'Студия · Акрил', line: 'Крупные форматы', photo: publicUrl('/slider/kate-01.png') },
+  { kicker: 'Акрил · Мастихин · Спрей', line: 'Работаю быстро', photo: publicUrl('/slider/kate-02.png') },
+  { kicker: 'Плотный цвет, никаких полутонов', line: 'Живу ярко', photo: publicUrl('/slider/kate-03.png') },
+  { kicker: 'Ночной город, дневная студия', line: 'Смотрю иначе', photo: publicUrl('/slider/kate-04.png') },
+  { kicker: 'Никаких компромиссов', line: 'Делаю по-своему', photo: publicUrl('/slider/kate-05.png') },
 ];
 
 export default function HomePage() {

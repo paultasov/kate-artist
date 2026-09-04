@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import { Reveal } from '@/shared/ui/Reveal';
 import { Magnetic } from '@/shared/ui/Magnetic';
+import { publicUrl } from '@/shared/lib/publicUrl';
 
-const ABOUT_PHOTO = '/about/about-kate.png';
+const ABOUT_PHOTO = publicUrl('/about/about-kate.png');
 
 const TIMELINE = [
   { year: '2016', text: 'Первый холст. Краска на полу, соседи в шоке.' },

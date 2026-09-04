@@ -16,7 +16,7 @@ function App() {
   return (
     <AuthProvider>
       <FavoritesProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <SmoothScroll>
             <Routes>
               <Route element={<Layout />}>
